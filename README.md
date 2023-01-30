@@ -8,7 +8,7 @@ This Project is implementing the game of Set. The game is played using the termi
 
 ## Contributors
 * Yuchen Wang
-*
+* Madison Irwin
 * 
 *
 *
