@@ -6,9 +6,6 @@ CSE3901 project2 repository
 This Project is implementing the game of Set. The game is played using the terminal.
 
 
-## How to use git
-
-
 ## Contributors
 * Yuchen Wang
 * Madison Irwin
