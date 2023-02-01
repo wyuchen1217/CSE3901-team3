@@ -11,7 +11,7 @@ This Project is implementing the game of Set. The game is played using the termi
 * Madison Irwin
 * Hannah Ackley
 * Christian Barrett
-*
+* Gautam Agarwal
 *
 
 
