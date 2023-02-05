@@ -1,5 +1,27 @@
-# Authors: Hannah Ackley, 
+# Authors: Hannah Ackley, Yuchen Wang
 # Date: 7 February 2023
+
+require './card'
+require './deck'
+require './player'
+require './game'
+
+
+
+# game set up
+
+# create a new deck
+deck = Deck.new
+deck.shuffle
+
+#number of cards in one turn
+NUM_CARDS = 12
+
+#deal 12 cards from the deck
+table = []
+(1..NUM_CARDS).each do |i|
+    table << deck.deal
+end
 
 # Keep playing games until user states that they are done
 loop do
