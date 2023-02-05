@@ -1,6 +1,6 @@
 require './card'
 
-class deck
+class Deck
     def initialize
         @deck = []
         @colors = ["red", "green", "purple"]
