@@ -72,11 +72,13 @@ loop do
     # Ask user if they would like to play again
 
     puts "Would you like to play again?"
-    puts "1. Yes, Play Again"
-    puts "2. No, Quit"
-    playAgain = gets.chomp
+    puts "(1) Yes, Play Again"
+    puts "(2) No, Quit"
+    quit_game = gets.chomp == "2" # false if they want to play again
 
-        # If they do not, output thank you message
-
+    # If they do not, output thank you message
+    if quit_game do
         puts "Thanks for playing! Come Back Soon!"
+        break
+    end
 end
