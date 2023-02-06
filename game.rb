@@ -49,6 +49,7 @@ def table_contains_set?(table)
   end
 
   def play
+    start_time = Time.now
     sets_found = 0
     while deck.any?
         (0...table.length).each do |i|
@@ -66,6 +67,13 @@ def table_contains_set?(table)
                 end
               end
             end
+          end
+
+          # Check the time
+          elapsed_time = Time.now - start_time
+          if elapsed_time >= 60
+            puts "Time's up!"
+            break
           end
         end
         # end the game
