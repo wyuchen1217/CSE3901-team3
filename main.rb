@@ -1,4 +1,4 @@
-# Authors: Hannah Ackley, Yuchen Wang
+# Authors: Hannah Ackley, Yuchen Wang, Christian Barrett
 # Date: 7 February 2023
 
 require './card'
