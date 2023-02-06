@@ -6,10 +6,6 @@ require './card'
 require './deck'
 
 
-def initialize
-
-end
-
 # check if the three cards form a set
 def check_set(card1, card2, card3)
   color_set = (card1.color == card2.color) && (card2.color == card3.color) ||

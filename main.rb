@@ -1,6 +1,8 @@
 # Authors: Hannah Ackley, Yuchen Wang, Christian Barrett
 # Date: 7 February 2023
 
+puts "test"
+
 require './card'
 require './deck'
 require './player'
@@ -17,11 +19,7 @@ deck.shuffle
 #number of cards in one turn
 NUM_CARDS = 12
 
-#deal 12 cards from the deck
-table = []
-(1..NUM_CARDS).each do |i|
-    table << deck.deal
-end
+
 
 # Keep playing games until user states that they are done
 loop do
@@ -32,8 +30,12 @@ loop do
     # "Play" game until the timer runs out
     loop do
 
+        #deal 12 cards from the deck
+        table = []
+        NUM_CARDS.times { table << deck.deal }
+        
         # Output the cards in the hand
-        puts "The cards in the hand are: "
+        puts "The cards on the table are: "
         table.each_with_index do |card, index|
             puts "#{index + 1}. #{card}"
         end
@@ -81,4 +83,5 @@ loop do
         puts "Thanks for playing! Come Back Soon!"
         break
     end
+end
 end
