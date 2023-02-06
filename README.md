@@ -10,9 +10,9 @@ This Project is implementing the game of Set. The game is played using the termi
 * Yuchen Wang
 * Madison Irwin
 * Hannah Ackley
+* Christopher Johnson
 * Christian Barrett
 * Gautam Agarwal
-*
 
 
 ## How to play this game
