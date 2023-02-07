@@ -68,7 +68,7 @@ until !play_again
       if input1 == '0'
         if table_contains_set?(table)
           # Subtract one point if player incorrectly states that no sets exist
-          puts 'Incorrect, there is a set in the hand. Minus 1 points. Try again.'
+          puts 'Incorrect, there is a set in the hand. Minus 1 point. Try again.'
           player.dec_points
           next
         else
@@ -107,7 +107,7 @@ until !play_again
           puts "Correct! #{card1.output}, #{card2.output}, and #{card3.output} makes a set."
 
           # Output the player's number of points earned
-          puts "Congrats! You scored #{player.points} points."
+          puts "Congrats! You've scored #{player.points} points so far."
 
         # Subtract one point is player guesses an incorrect set
         else
@@ -134,5 +134,5 @@ until !play_again
   if play_again == 2
     puts "Thanks for playing! Come Back Soon!"
   end
-  puts "Thanks for playing! Come Back Soon!"
+   puts "Thanks for playing! Come Back Soon!"
 end
