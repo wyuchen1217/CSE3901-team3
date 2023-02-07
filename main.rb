@@ -157,8 +157,8 @@ until !play_again
 end
 
 puts "Scores: "
-winner = " "
-max = player_array[0].points
+# winner = " "
+# max = player_array[0].points
 player_array.each do |player|
   puts "#{player.name}'s score: #{player.points}"
 end
