@@ -49,12 +49,13 @@ loop do
         end
 
         # Prompt player for their guess (guess 0 if no sets in hand)
-        puts "Pick card 1: "
+        puts "Pick a card by entering the number seen to the left of the card: "
+        puts "Pick card 1 (or enter 0 if there is no set): "
         input1 = gets.chomp
 
         # If 0, skip
         if input1 == "0"
-            if game.!table_contains_set?(table)
+            if table_contains_set?(table)
                 # Subtract one point if player incorrectly states that no sets exist
                 puts "Incorrect, there is a set in the hand. Try again."
                 next
@@ -62,6 +63,11 @@ loop do
                 # Add 3 additional cards to hand if no set exists
                 puts "Correct, there are currently no sets in this hand. 3 more cards will be added."
                 3.times { table << deck.deal }
+                # Output the cards in the hand
+                puts "The cards on the table are: "
+                table.each_with_index do |card, index|
+                  puts "#{index + 1}. #{card.output()}"
+                end
             end
         else 
             puts "Pick card 2: "
@@ -75,7 +81,7 @@ loop do
             card3 = table[input3.to_i - 1]
 
             # Add one point if player correctly identifies a set
-            if game.check_set(card1, card2, card3)
+            if check_set(card1, card2, card3)
                 player.inc_points
                 puts "Correct! #{card1}, #{card2}, and #{card3} makes a set."
 
