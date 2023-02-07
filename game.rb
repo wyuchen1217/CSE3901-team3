@@ -1,4 +1,4 @@
-# Authors: Yuchen Wang
+# Authors: Yuchen Wang, Gautam Agarwal
 # Date: 7 February 2023
 
 
@@ -44,6 +44,21 @@ def table_contains_set?(table)
     end
   end
   false
+end
+
+# Generates hint
+def hint(table) 
+  table.each do |first_card| 
+    table.each do |second_card| 
+      table.each do |third_card| 
+        if (first_card != second_card && first_card != third_card && second_card != third_card) && check_set(first_card, second_card, third_card) 
+          puts "Hint: #{first_card.to_s} - #{second_card.to_s} - #{third_card.to_s} is a set. Enjoy!" 
+          return 
+        end 
+      end 
+    end 
+  end 
+  puts "No more hints available." 
 end
 
 def play
