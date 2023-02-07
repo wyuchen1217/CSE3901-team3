@@ -51,7 +51,7 @@ until !play_again || deck.empty?
 
     # Prompt player for their guess (guess 0 if no sets in hand)
     puts 'Pick a card by entering the number seen to the left of the card: '
-    puts 'Pick card 1 (or enter 0 if there is no set): '
+    puts 'Pick card 1 (or enter 0 if there is no set. Enter 13 for hint): '
     input1 = gets.chomp
     
 
