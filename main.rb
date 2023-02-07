@@ -59,10 +59,10 @@ until !play_again
       input1 = gets.chomp
       
       # If anything else other than 0-13, error will occur
-      if input1 != %w[0 1 2 3 4 5 6 7 8 9 10 11 12 13]
-        puts 'ERROR: Did not pick a card or ask for hint. Please pick card 1.'
-        input1 = gets.chomp
-      end
+      if !(0..12).include?(input1.to_i)
+          puts 'ERROR: Please pick a card between 0 and 12. Try again.'
+          input1 = gets.chomp
+        end
 
       # If 13, hint generated!
       if input1 == '13'
@@ -98,8 +98,8 @@ until !play_again
         end
         
         # If anything else other than 0-12, error will occur
-        if input2 != %w[0 1 2 3 4 5 6 7 8 9 10 11 12]
-          puts 'ERROR: Did not pick a card. Please pick card 3.'
+        if !(0..12).include?(input2.to_i)
+          puts 'ERROR: Please pick a card between 0 and 12. Try again.'
           input2 = gets.chomp
         end
 
@@ -111,8 +111,8 @@ until !play_again
         end
         
         # If anything else other than 0-12, error will occur
-        if input3 != %w[0 1 2 3 4 5 6 7 8 9 10 11 12]
-          puts 'ERROR: Did not pick a card. Please pick card 3.'
+        if !(0..12).include?(input3.to_i)
+          puts 'ERROR: Please pick a card between 0 and 12. Try again.'
           input3 = gets.chomp
         end
 
