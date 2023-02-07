@@ -59,7 +59,7 @@ until !play_again
       input1 = gets.chomp
       
       # If anything else other than 0-13, error will occur
-      if !(0..12).include?(input1.to_i)
+      if !(0..13).include?(input1.to_i)
           puts 'ERROR: Please pick a card between 0 and 12. Try again.'
           input1 = gets.chomp
         end
@@ -69,6 +69,10 @@ until !play_again
         hint(table)
         puts 'Pick card 1 again!'
         input1 = gets.chomp
+        while input1 == '13'
+          puts 'Cannont generate hint again. Try picking up a card!'
+          input1 = gets.chomp
+        end
       end
 
       # If 0, skip
