@@ -127,7 +127,7 @@ until !play_again
         # Add one point if player correctly identifies a set
         if check_set(card1, card2, card3)
           player.inc_points
-          puts "Correct! #{card1.output}, #{card2.output}, and #{card3.output} makes a set."
+          puts "\nCorrect! Your set of:\n#{card1.output}#{card2.output}#{card3.output}makes a set.\n"`
 
           # Output the player's number of points earned
           puts "Congrats! You've scored #{player.points} points so far."
@@ -135,7 +135,7 @@ until !play_again
         # Subtract one point is player guesses an incorrect set
         else
           player.dec_points
-          puts "#{card1.output}, #{card2.output}, and #{card3.output} are not a set, try again."
+          puts "\nYour selection of:\n#{card1.output}#{card2.output}#{card3.output}is not a set, try again.\n"
         end
       end
     end # END OF PLAYER LOOP
