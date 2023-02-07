@@ -10,7 +10,7 @@ require './game.rb'
   
 puts "Welcome to the game of Set! How many players are there?"
 player_count = gets.chomp
-print "hi"
+puts "hi"
 player_array = []
 player_count.times {
     puts "Please enter player's name: "
@@ -18,9 +18,9 @@ player_count.times {
     points = 0
     player_array << player.new(playerName, points)
 }
-print player_array
+puts player_array
 
-game = Game.new
+# game = Game.new
 
 
 # create a new deck
