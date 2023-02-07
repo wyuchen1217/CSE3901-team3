@@ -85,9 +85,17 @@ until !play_again
       else
         puts 'Pick card 2: '
         input2 = gets.chomp
+        while input2 == input1
+          puts 'You cannot pick the same card. Try Again!'
+          input2 = gets.chomp
+        end
 
         puts 'Pick card 3: '
         input3 = gets.chomp
+        while input3 == input2 || input3 == input1
+          puts 'You cannot pick the same card. Try Again!'
+          input3 = gets.chomp
+        end
 
         card1 = table[input1.to_i - 1]
         card2 = table[input2.to_i - 1]
