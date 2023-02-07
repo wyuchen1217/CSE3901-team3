@@ -88,7 +88,7 @@ until deck.empty? || !play_again
         puts "Correct! #{card1.output}, #{card2.output}, and #{card3.output} makes a set."
 
         # Output the player's number of points earned
-        puts 'Congrats! You scored #{player.points} points.'
+        puts "Congrats! You scored #{player.points} points."
 
       # Subtract one point is player guesses an incorrect set
       else
