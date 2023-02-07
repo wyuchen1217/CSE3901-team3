@@ -127,7 +127,7 @@ until !play_again
         # Add one point if player correctly identifies a set
         if check_set(card1, card2, card3)
           player.inc_points
-          puts "\nCorrect! Your set of:\n#{card1.output}#{card2.output}#{card3.output}makes a set.\n"`
+          puts "\nCorrect! Your set of:\n#{card1.output}#{card2.output}#{card3.output}makes a set.\n"
 
           # Output the player's number of points earned
           puts "Congrats! You've scored #{player.points} points so far."
