@@ -53,6 +53,14 @@ until !play_again || deck.empty?
     puts 'Pick a card by entering the number seen to the left of the card: '
     puts 'Pick card 1 (or enter 0 if there is no set): '
     input1 = gets.chomp
+    
+
+    # If 13, hint generated!
+    if input1 == '13'
+      hint(table)
+      puts 'Pick card 1 again!'
+      input1 = gets.chomp
+    end
 
     # If 0, skip
     if input1 == '0'
