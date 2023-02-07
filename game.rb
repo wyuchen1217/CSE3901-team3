@@ -5,6 +5,8 @@
 require './card'
 require './deck'
 
+# Constructor for game - TO DO
+# def initialize
 
 # check if the three cards form a set
 def check_set(card1, card2, card3)
