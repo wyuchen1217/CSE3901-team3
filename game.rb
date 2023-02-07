@@ -70,7 +70,8 @@ end
 def play
   start_time = Time.now
   sets_found = 0
-  while deck.any?
+  while deck.any? || sets_found > 0
+      sets_found = 0;
       (0...table.length).each do |i|
         (i+1...table.length).each do |j|
           (j+1...table.length).each do |k|
