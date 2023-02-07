@@ -9,16 +9,17 @@ require './game.rb'
 # game set up
   
 puts "Welcome to the game of Set! How many players are there?"
-player_count = gets.chomp
-puts "hi"
+player_count = gets.chomp.to_i
+
 player_array = []
 player_count.times {
     puts "Please enter player's name: "
     playerName = gets.chomp
     points = 0
-    player_array << player.new(playerName, points)
+    player_array << Player.new(playerName, points)
 }
-puts player_array
+# puts player_array[0].name
+
 
 # game = Game.new
 
@@ -47,7 +48,7 @@ loop do
         # Output the cards in the hand
         puts "The cards on the table are: "
         table.each_with_index do |card, index|
-            puts "#{index + 1}. #{card}"
+            puts "#{index + 1}. #{card.output()}"
         end
 
         # Prompt player for their guess (guess 0 if no sets in hand)
