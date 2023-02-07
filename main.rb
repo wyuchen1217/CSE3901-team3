@@ -31,8 +31,8 @@ NUM_CARDS = 12
 
 # Keep playing games until user states that they are done or until deck is empty
 play_again = true
-while play_again
-
+until !play_again || deck.empty?
+  
   # Create a new game instance by calling the game constructor
 
   # loop through players
