@@ -1,12 +1,12 @@
-# Authors: Hannah Ackley, Yuchen Wang, Christian Barrett
+# Authors: Hannah Ackley, Yuchen Wang, Christian Barrett, Madison Irwin
 # Date: 7 February 2023
 
 puts "test"
 
-require './card'
-require './deck'
-require './player'
-require './game'
+require './card.rb'
+require './deck.rb'
+require './player.rb'
+require './game.rb'
 
 
 
@@ -25,7 +25,7 @@ NUM_CARDS = 12
 loop do
 
     # Create a new game instance by calling the game constructor
-
+    game = Game.new
 
     # "Play" game until the timer runs out
     loop do
