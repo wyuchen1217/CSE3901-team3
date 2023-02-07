@@ -32,7 +32,7 @@ deck.shuffle
 NUM_CARDS = 12
 
 # Keep playing games until user states that they are done or until deck is empty
-while deck.any?
+while !deck.empty?
 
     # Create a new game instance by calling the game constructor
 
@@ -87,12 +87,12 @@ while deck.any?
             # Add one point if player correctly identifies a set
             if check_set(card1, card2, card3)
                 player.inc_points
-                puts "Correct! #{card1}, #{card2}, and #{card3} makes a set."
+                puts "Correct! #{card1.output()}, #{card2.output()}, and #{card3.output()} makes a set."
 
             # Subtract one point is player guesses an incorrect set
             else
                 player.dec_points
-                puts "#{card1}, #{card2}, and #{card3} are not a set, try again."
+                puts "#{card1.output()}, #{card2.output()}, and #{card3.output()} are not a set, try again."
             end
         end
       # END OF PLAYER LOOP
@@ -106,7 +106,7 @@ while deck.any?
     puts "Would you like to play again?"
     puts "(1) Yes, Play Again"
     puts "(2) No, Quit"
-    quit_game = gets.chomp == "2" # false if they want to play again
+    quit_game = (gets.chomp == "2") # false if they want to play again
 
     # If they do not, output thank you message
     if quit_game do
