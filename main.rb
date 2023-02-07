@@ -144,10 +144,4 @@ winner = " "
 max = player_array[0].points
 player_array.each do |player|
   puts "#{player.name}'s score: #{player.points}"
-  if player.points > max do
-    max = player.points
-    winner = player.name
-  end
-end
-puts "Winner: #{winner}"
 end
