@@ -21,9 +21,6 @@ player_count.times {
 # puts player_array[0].name
 
 
-# game = Game.new
-
-
 # create a new deck
 deck = Deck.new
 deck.shuffle
