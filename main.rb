@@ -31,13 +31,13 @@ NUM_CARDS = 12
 
 # Keep playing games until user states that they are done or until deck is empty
 play_again = true
-until deck.empty? || !play_again
+while play_again
 
   # Create a new game instance by calling the game constructor
 
   # loop through players
   player_array.each do |player|
-    puts "#{player.name}'s turn:'"
+    puts "#{player.name}'s turn: "
     puts '________________________'
     # deal 12 cards from the deck
     table = []
@@ -70,6 +70,7 @@ until deck.empty? || !play_again
         table.each_with_index do |card, index|
           puts "#{index + 1}. #{card.output}"
         end
+        
       end
     else
       puts 'Pick card 2: '
@@ -105,7 +106,8 @@ until deck.empty? || !play_again
   puts '(1) Keep Playing!'
   puts '(2) No, Quit'
   play_again = (gets.chomp == '1')
-
-  # If they do not, output thank you message
-  puts 'Thanks for playing! Come Back Soon!'
+  if play_again == 2
+    puts "Thanks for playing! Come Back Soon!"
+  end
+  puts "Thanks for playing! Come Back Soon!"
 end
