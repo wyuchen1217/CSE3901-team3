@@ -105,6 +105,10 @@ until !play_again
         if !(0..12).include?(input2.to_i)
           puts 'ERROR: Please pick a card between 0 and 12. Try again.'
           input2 = gets.chomp
+          while input2 == input1
+          puts 'You cannot pick the same card. Try Again!'
+          input2 = gets.chomp
+        end
         end
 
         puts 'Pick card 3: '
@@ -118,6 +122,10 @@ until !play_again
         if !(0..12).include?(input3.to_i)
           puts 'ERROR: Please pick a card between 0 and 12. Try again.'
           input3 = gets.chomp
+          while input3 == input2 || input3 == input1
+          puts 'You cannot pick the same card. Try Again!'
+          input3 = gets.chomp
+        end
         end
 
         card1 = table[input1.to_i - 1]
