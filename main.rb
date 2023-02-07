@@ -19,7 +19,9 @@ player_count.times do
   points = 0
   player_array << Player.new(playerName, points)
 end
-# puts player_array[0].name
+
+print "How many seconds do you want the game to last?"
+player_inputted_time = gets.chomp.to_i
 
 # create a new deck
 deck = Deck.new
@@ -118,7 +120,7 @@ until !play_again
     end # END OF PLAYER LOOP
     # Check the time
     elapsed_time = Time.now - start_time
-    if elapsed_time >= 60
+    if elapsed_time >= player_inputted_time
       times_up = true
       puts "Time's up!"
     end
