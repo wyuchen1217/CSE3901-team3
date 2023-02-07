@@ -8,7 +8,7 @@ require './game.rb'
 
 # game set up
   
-puts "Welcome to the game of Set! How many players are there?"
+print "Welcome to the game of Set! How many players are there? " #prints for no new line at end
 player_count = gets.chomp.to_i
 
 player_array = []
@@ -21,6 +21,9 @@ player_count.times {
 # puts player_array[0].name
 
 
+# game = Game.new
+
+
 # create a new deck
 deck = Deck.new
 deck.shuffle
@@ -28,20 +31,20 @@ deck.shuffle
 #number of cards in one turn
 NUM_CARDS = 12
 
-# Keep playing games until user states that they are done
-loop do
+# Keep playing games until user states that they are done or until deck is empty
+while deck.any?
 
     # Create a new game instance by calling the game constructor
 
-    # "Play" game until the timer runs out
-    loop do
+    # loop through players
+    player_array.each do |player|
 
+        puts "#{player.name}'s turn:'"
+        puts "________________________"
         #deal 12 cards from the deck
         table = []
         NUM_CARDS.times { table << deck.deal }
     
-        #Output "enter 0 if no sets"
-
         # Output the cards in the hand
         puts "The cards on the table are: "
         table.each_with_index do |card, index|
@@ -57,7 +60,8 @@ loop do
         if input1 == "0"
             if table_contains_set?(table)
                 # Subtract one point if player incorrectly states that no sets exist
-                puts "Incorrect, there is a set in the hand. Try again."
+                puts "Incorrect, there is a set in the hand. Minus 1 points. Try again."
+                player.dec_points()
                 next
             else 
                 # Add 3 additional cards to hand if no set exists
@@ -91,6 +95,7 @@ loop do
                 puts "#{card1}, #{card2}, and #{card3} are not a set, try again."
             end
         end
+      # END OF PLAYER LOOP
     end
     # Output the player's number of points earned
 
