@@ -5,6 +5,8 @@
 require './card'
 require './deck'
 
+# make class 
+
 # Constructor for game - TO DO
 # def initialize
 
