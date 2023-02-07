@@ -62,35 +62,3 @@ def hint(table)
   end 
   puts "No more hints available." 
 end
-
-def play
-  start_time = Time.now
-  sets_found = 0
-  while deck.any? || sets_found > 0
-      sets_found = 0;
-      (0...table.length).each do |i|
-        (i+1...table.length).each do |j|
-          (j+1...table.length).each do |k|
-            if check_set(table[i], table[j], table[k])
-              sets_found += 1
-              # remove the cards that form a set and replace them with new cards
-              table.delete(table[i])
-              table.delete(table[j])
-              table.delete(table[k])
-              table << deck.deal
-              table << deck.deal
-              table << deck.deal
-            end
-          end
-        end
-      end
-
-    # Check the time
-    elapsed_time = Time.now - start_time
-    if elapsed_time >= 60
-      puts "Time's up!"
-      break
-    end
-  end
-      # end the game
-end

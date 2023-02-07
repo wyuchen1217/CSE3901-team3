@@ -68,7 +68,7 @@ until !play_again
       if input1 == '0'
         if table_contains_set?(table)
           # Subtract one point if player incorrectly states that no sets exist
-          puts 'Incorrect, there is a set in the hand. Minus 1 point. Try again.'
+          puts 'Incorrect, there is a set in the hand. Minus 1 point. Turn forfeited.'
           player.dec_points
           next
         else
@@ -135,4 +135,17 @@ until !play_again
     puts "Thanks for playing! Come Back Soon!"
   end
    puts "Thanks for playing! Come Back Soon!"
+end
+
+puts "Scores: "
+winner = " "
+max = player_array[0].points
+player_array.each do |player|
+  puts "#{player.name}'s score: #{player.points}"
+  if player.points > max do
+    max = player.points
+    winner = player.name
+  end
+end
+puts "Winner: #{winner}"
 end
