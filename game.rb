@@ -48,9 +48,11 @@ end
 
 # Generates hint
 def hint(table) 
+  # Iterate through all possible combinations of 3 cards present in the table.
   table.each do |first_card| 
     table.each do |second_card| 
       table.each do |third_card| 
+        #check the tree cards make a set and are not same.
         if (first_card != second_card && first_card != third_card && second_card != third_card) && check_set(first_card, second_card, third_card) 
           puts "Hint: #{first_card.to_s} - #{second_card.to_s} - #{third_card.to_s} is a set. Enjoy!" 
           return 
